@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+     <link rel="stylesheet" href="styles.css">
+    <title>Pizza Ordering App</title>
+</head>
+<body>
+    <header>
+        <h1>Samuel's Diner</h1>
+        <p>The best burgers and pizzas in town.</p>
+    </header>
+
+    <main>
+        <section class="menu">
+            <ul class="menu-list" id="menu-items">
+                <!-- Menus -->
+                
+            </ul>
+        </section>
+
+        <section class="orders-section hidden" id="order-section">
+            <div class="order">
+
+                <h2>Your Orders</h2>
+                <ul class="order-list" id="order-list">
+                    <!-- Orders goes here -->
+                </ul>
+                <div class="order-summary">
+                    <p>Total Price: </p>
+                    <span id="order-summary-total">$26</span>
+                </div>
+
+                <button type="button" class="btn complete-order-btn" id="complete-order-btn">Complete Order</button>
+            </div>
+        </section>
+
+        <section class="order-complete hidden" id="order-complete">
+            <p id="order-complete-message"></p>
+        </section>
+
+        <!-- Modal -->
+         <div class="modal-backdrop hidden" id="modal-backdrop"></div>
+         <div class="modal modal-checkout hidden" id="checkout-modal">
+            <form action="" class="modal-form" id="checkout-form">
+                <h3 class="modal-form-title">Enter card details</h3>
+                <div class="form-input">
+                    <label for="name">Enter your name</label>
+                    <input type="text" id="name" placeholder="e.g., Samuel Ochieng" name="name" required>
+                </div>
+
+                <div class="form-input">
+                    <label for="card-number">Enter card number</label>
+                    <input type="text" id="card-number" placeholder="e.g., 4444222233335555" name="card-number" required minlength="16" maxlength="16" pattern="\d{16}">
+                </div>
+
+                <div class="form-input">
+                    <label for="cvv">Enter CVV</label>
+                    <input type="text" id="cvv" placeholder="e.g., 676" required name="cvv" pattern="\d{3,4}">
+                </div>
+
+                <button type="button" id="pay-btn">Pay</button>
+            </form>
+        </div>
+    </main>
+
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>
